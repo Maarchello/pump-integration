@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="0" author="Marat Kadzhaev">
+        <comment>Added uuid extension</comment>
+        <sql>CREATE EXTENSION IF NOT EXISTS "uuid-ossp";</sql>
+    </changeSet>
+
+    <changeSet id="1" author="Marat Kadzhaev">
+        <comment>Create pump dictionary table</comment>
+        <createTable tableName="pump_dictionary">
+            <column name="id" type="serial">
+                <constraints primaryKey="true" unique="true"/>
+            </column>
+            <column name="create_date" type="timestamp"/>
+            <column name="code" type="text" />
+            <column name="name" type="text" />
+            <column name="version" type="text" />
+            <column name="scod" type="text" />
+            <column name="date_version" type="timestamp" />
+        </createTable>
+    </changeSet>
+
+    <changeSet id="2" author="Marat Kadzhaev">
+        <comment>Create table for store dictionary values</comment>
+        <createTable tableName="pump_dictionary_value">
+            <column name="id" type="serial">
+                <constraints primaryKey="true" unique="true"/>
+            </column>
+            <column name="create_date" type="timestamp"/>
+            <column name="code" type="text" />
+            <column name="name" type="text" />
+            <column name="version_id" type="text" />
+            <column name="pump_id" type="text" />
+            <column name="pump_dictionary_id" type="bigint">
+                <constraints foreignKeyName="fk_to_pump_dictionary" references="pump_dictionary(id)" />
+            </column>
+        </createTable>
+    </changeSet>
+    
+    <changeSet id="3" author="Marat Kadzhaev">
+        <comment>Create table for store supported dictionaries</comment>
+        <createTable tableName="supported_dictionary">
+            <column name="id" type="serial">
+                <constraints primaryKey="true" unique="true"/>
+            </column>
+            <column name="create_date" type="timestamp"/>
+            <column name="dictionary_code" type="text" />
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>

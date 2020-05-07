@@ -1,0 +1,764 @@
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://impl.ws.pmp.pmp.ibs.ru/"
+                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+                  xmlns:ns1="http://ws.pmp.pmp.ibs.ru/" name="PmpWsImplService"
+                  targetNamespace="http://impl.ws.pmp.pmp.ibs.ru/">
+<!--    location="http://192.168.192.119:8080/module-pmp/ws/pmpWs?wsdl=PmpWs.wsdl"-->
+    <wsdl:import
+            location="localPmpWs20200131.wsdl"
+            namespace="http://ws.pmp.pmp.ibs.ru/"/>
+    <wsdl:binding name="PmpWsImplServiceSoapBinding" type="ns1:PmpWs">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="createUpdateAmbCase">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="createUpdateAmbCase">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="createUpdateAmbCaseResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+<!--        <wsdl:operation name="createUpdateSmpCase">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="createUpdateSmpCase">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="createUpdateSmpCaseResponse">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="getInvoicePassport">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="getInvoicePassport">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="getInvoicePassportResponse">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="getInvoicePassportSmp">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="getInvoicePassportSmp">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="getInvoicePassportSmpResponse">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="getInvoicePassportSmpAdd">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="getInvoicePassportSmpAdd">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="getInvoicePassportSmpAddResponse">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="getUpErrors">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="getUpErrors">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="getUpErrorsResponse">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="getHospCase">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="getHospCase">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="getHospCaseResponse">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="getSmpCase">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="getSmpCase">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="getSmpCaseResponse">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="getSmpCase20190501">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="getSmpCase20190501">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="getSmpCaseResponse20190501">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="getHospCase_v2">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="getHospCase_v2">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="getHospCase_v2Response">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="getHospCase170701">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="getHospCase170701">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="getHospCase170701Response">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="getHospCase180101">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="getHospCase180101">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="getHospCaseResponse180101">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="getHospCase180201">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="getHospCase180201">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="getHospCaseResponse180201">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="getHospCase180301">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="getHospCase180301">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="getHospCaseResponse180301">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="getHospCase180701">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="getHospCase180701">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="getHospCaseResponse180701">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="getHospCase180401">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="getHospCase180401">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="getHospCaseResponse180401">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="getHospCase180801">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="getHospCase180801">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="getHospCaseResponse180801">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="getHospCase180901">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="getHospCase180901">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="getHospCaseResponse180901">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="getHospCase181101">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="getHospCase181101">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="getHospCaseResponse181101">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="getHospCase190101">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="getHospCase190101">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="getHospCaseResponse190101">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="getHospCase190201">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="getHospCase190201">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="getHospCaseResponse190201">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="getHospCase190301">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="getHospCase190301">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="getHospCaseResponse190301">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="getHospCase190401">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="getHospCase190401">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="getHospCaseResponse190401">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="getHospCase190501">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="getHospCase190501">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="getHospCaseResponse190501">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="getHospCase190601">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="getHospCase190601">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="getHospCaseResponse190601">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+        <wsdl:operation name="getHospCase191201">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="getHospCase191201">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="getHospCaseResponse191201">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+<!--        <wsdl:operation name="getAmbCase180101">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="getAmbCase180101">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="getAmbCaseResponse180101">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="getAmbCase180701">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="getAmbCase180701">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="getAmbCaseResponse180701">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="getAmbCase180901">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="getAmbCase180901">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="getAmbCaseResponse180901">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="getAmbCase181101">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="getAmbCase181101">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="getAmbCaseResponse181101">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="getAmbCase190101">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="getAmbCase190101">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="getAmbCaseResponse190101">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="getAmbCase190201">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="getAmbCase190201">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="getAmbCaseResponse190201">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="getAmbCase190301">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="getAmbCase190301">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="getAmbCaseResponse190301">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="getAmbCase190401">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="getAmbCase190401">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="getAmbCaseResponse190401">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="getAmbCase190501">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="getAmbCase190501">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="getAmbCaseResponse190501">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="getAmbCase190601">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="getAmbCase190601">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="getAmbCaseResponse190601">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+        <wsdl:operation name="getAmbCase191201">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="getAmbCase191201">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="getAmbCaseResponse191201">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+<!--        <wsdl:operation name="getMailGw">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="getMailGw">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="getMailGwResponse">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="getMailGw20180901">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="getMailGw20180901">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="getMailGw20180901Response">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="getMailGw20190801">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="getMailGw20190801">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="getMailGw20190801Response">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="getMailGwSmp">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="getMailGwSmp">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="getMailGwSmpResponse">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="getMailGwSmpAdd">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="getMailGwSmpAdd">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="getMailGwSmpAddResponse">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="listBills">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="listBills">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="listBillsResponse">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="listBills170801">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="listBills170801">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="listBills170801Response">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="listBillsSmp">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="listBillsSmp">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="listBillsSmpResponse">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="getBillUNKNOWN">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="getBillUNKNOWN">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="getBillUNKNOWNResponse">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="getBillSmpUNKNOWN">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="getBillSmpUNKNOWN">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="getBillSmpUNKNOWNResponse">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="getBillSmpAddUNKNOWN">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="getBillSmpAddUNKNOWN">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="getBillSmpAddUNKNOWNResponse">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="listBillsSmpAdd">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="listBillsSmpAdd">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="listBillsSmpAddResponse">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="recreateKill">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="recreateKill">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="recreateKillResponse">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="recreateBills">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="recreateBills">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="recreateBillsResponse">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="recreateBillsSmp">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="recreateBillsSmp">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="recreateBillsSmpResponse">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="recreateBillsSmpAdd">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="recreateBillsSmpAdd">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="recreateBillsSmpAddResponse">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="changeBillStatus">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="changeBillStatus">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="changeBillStatusResponse">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--            <wsdl:fault name="Exception">-->
+<!--                <soap:fault name="Exception" use="literal"/>-->
+<!--            </wsdl:fault>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="changeBillStatusSmp">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="changeBillStatusSmp">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="changeBillStatusSmpResponse">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--            <wsdl:fault name="Exception">-->
+<!--                <soap:fault name="Exception" use="literal"/>-->
+<!--            </wsdl:fault>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="changeBillStatusSmpAdd">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="changeBillStatusSmpAdd">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="changeBillStatusSmpAddResponse">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--            <wsdl:fault name="Exception">-->
+<!--                <soap:fault name="Exception" use="literal"/>-->
+<!--            </wsdl:fault>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="sendMGFOMS">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="sendMGFOMS">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="sendMGFOMSResponse">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="sendMGFOMS170801">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="sendMGFOMS170801">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="sendMGFOMS170801Response">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="sendMGFOMSSmp">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="sendMGFOMSSmp">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="sendMGFOMSSmpResponse">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="sendMGFOMSSmpAdd">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="sendMGFOMSSmpAdd">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="sendMGFOMSSmpAddResponse">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="findDocuments">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="findDocuments">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="findDocumentsResponse">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="findSmpDocuments">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="findSmpDocuments">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="findSmpDocumentsResponse">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="findDocuments170701">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="findDocuments170701">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="findDocuments170701Response">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="getExpertiseFile">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="getExpertiseFile">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="getExpertiseFileResponse">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="getExpertiseFileSmp">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="getExpertiseFileSmp">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="getExpertiseFileSmpResponse">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="getExpertiseFileSmpAdd">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="getExpertiseFileSmpAdd">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="getExpertiseFileSmpAddResponse">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="getMeErrors">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="getMeErrors">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="getMeErrorsResponse">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="listPeriods">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="listPeriods">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="listPeriodsResponse">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="getAmbCase">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="getAmbCase">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="getAmbCaseResponse">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="getAmbCase170701">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="getAmbCase170701">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="getAmbCase170701Response">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+        <wsdl:operation name="createUpdateHospCase">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="createUpdateHospCase">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="createUpdateHospCaseResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+<!--        <wsdl:operation name="getUdErrors">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="getUdErrors">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="getUdErrorsResponse">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="removeMedCase">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="removeMedCase">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="removeMedCaseResponse">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="searchErrors">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="searchErrors">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="searchErrorsResponse">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="findCTRLErrorsR">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="findCTRLErrorsR">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="findCTRLErrorsRResponse">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="findCTRLErrorsRIN">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="findCTRLErrorsRIN">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="findCTRLErrorsRINResponse">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="findCTRLErrorsRXX">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="findCTRLErrorsRXX">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="findCTRLErrorsRXXResponse">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="findCTRLErrors">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="findCTRLErrors">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="findCTRLErrorsResponse">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="findCTRLErrorsSmp">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="findCTRLErrorsSmp">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="findCTRLErrorsSmpResponse">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="findCTRLErrorsSmpAdd">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="findCTRLErrorsSmpAdd">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="findCTRLErrorsSmpAddResponse">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="getBillFlk">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="getBillFlk">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="getBillFlkResponse">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+<!--        <wsdl:operation name="isAlive">-->
+<!--            <soap:operation soapAction="" style="document"/>-->
+<!--            <wsdl:input name="isAlive">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:input>-->
+<!--            <wsdl:output name="isAliveResponse">-->
+<!--                <soap:body use="literal"/>-->
+<!--            </wsdl:output>-->
+<!--        </wsdl:operation>-->
+    </wsdl:binding>
+    <wsdl:service name="PmpWsService">
+        <wsdl:port binding="tns:PmpWsImplServiceSoapBinding" name="Client">
+            <soap:address location="http://192.168.192.119:8080/module-pmp/ws/pmpWs"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

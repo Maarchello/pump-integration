@@ -1,0 +1,77 @@
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://impl.ws.pmp.ibs.ru/"
+                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+                  xmlns:ns1="http://ws.pmp.ibs.ru/" name="NsiWsImplService"
+                  targetNamespace="http://impl.ws.pmp.ibs.ru/">
+    <wsdl:import location="http://192.168.192.119:8080/module-nsi/ws/nsiWs?wsdl=NsiWs.wsdl" namespace="http://ws.pmp.ibs.ru/"> </wsdl:import>
+    <wsdl:binding name="NsiWsImplServiceSoapBinding" type="ns1:NsiWs">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="getDictionaries">
+            <soap:operation soapAction="getDictionaries" style="document"/>
+            <wsdl:input name="getDictionaries">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="getDictionariesResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getDictionary">
+            <soap:operation soapAction="getDictionary" style="document"/>
+            <wsdl:input name="getDictionary">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="getDictionaryResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getDictionaries171001">
+            <soap:operation soapAction="getDictionaries171001" style="document"/>
+            <wsdl:input name="getDictionaries171001">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="getDictionaries171001Response">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getDictionary171001">
+            <soap:operation soapAction="getDictionary171001" style="document"/>
+            <wsdl:input name="getDictionary171001">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="getDictionary171001Response">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getDictionaryAllVer">
+            <soap:operation soapAction="getDictionaryAllVer" style="document"/>
+            <wsdl:input name="getDictionaryAllVer">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="getDictionaryAllVerResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="uploadStasmp">
+            <soap:operation soapAction="uploadStasmp" style="document"/>
+            <wsdl:input name="uploadStasmp">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="uploadStasmpResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="isAlive">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="isAlive">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="isAliveResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="PumpWsService">
+        <wsdl:port binding="tns:NsiWsImplServiceSoapBinding" name="Client">
+            <soap:address location="http://192.168.192.119:8080/module-nsi/ws/nsiWs"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

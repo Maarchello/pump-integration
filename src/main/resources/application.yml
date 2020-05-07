@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: pump-integration
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/pump_integration
+    username: postgres
+    password: root
+  liquibase:
+    change-log: classpath:changelog/db-changelog-master.xml
+  jpa:
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+    hibernate:
+      ddl-auto: none
+    show-sql: false
+  jackson:
+    deserialization:
+      fail-on-unknown-properties: false
+server:
+  port: 8065
+
+swagger:
+  documentation:
+    title: ${spring.application.name}
+
+
+settings:
+  credentials:
+    username: uropian_gontarenko_fs_in
+    password: g8LuY6
+    system: МИС "ОМИС"
+    orgId: 5044

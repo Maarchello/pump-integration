@@ -1,0 +1,149 @@
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://impl.ws.practitioners.pmp.ibs.ru/"
+                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+                  xmlns:ns1="http://ws.practitioners.pmp.ibs.ru/" name="PractWsImplService"
+                  targetNamespace="http://impl.ws.practitioners.pmp.ibs.ru/">
+    <wsdl:import location="http://192.168.192.119:8080/module-practitioners-pmp/ws/practWs?wsdl=PractWs.wsdl" namespace="http://ws.practitioners.pmp.ibs.ru/"> </wsdl:import>
+    <wsdl:binding name="PractWsImplServiceSoapBinding" type="ns1:PractWs">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="deleteMOPractJobs">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="deleteMOPractJobs">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="deleteMOPractJobsResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="deleteMOPracts">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="deleteMOPracts">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="deleteMOPractsResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="createUpdateMOPractJob">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="createUpdateMOPractJob">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="createUpdateMOPractJobResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getMOPract">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="getMOPract">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="getMOPractResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getMOPractJob">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="getMOPractJob">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="getMOPractJobResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="createUpdateMOPractCert">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="createUpdateMOPractCert">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="createUpdateMOPractCertResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="createUpdateMOPractExpertCert">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="createUpdateMOPractExpertCert">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="createUpdateMOPractExpertCertResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="deleteMOPractCert">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="deleteMOPractCert">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="deleteMOPractCertResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="deleteMOPractExpertCert">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="deleteMOPractExpertCert">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="deleteMOPractExpertCertResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="createUpdateMoPract">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="createUpdateMoPract">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="createUpdateMoPractResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="adminUpdateMoPract">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="adminUpdateMoPract">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="adminUpdateMoPractResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="isAlive">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="isAlive">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="isAliveResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="createUpdateExpertJob">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="createUpdateExpertJob">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="createUpdateExpertJobResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getExpertJob">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="getExpertJob">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="getExpertJobResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="deleteExpertJob">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="deleteExpertJob">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="deleteExpertJobResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="PractWsService">
+        <wsdl:port binding="tns:PractWsImplServiceSoapBinding" name="PractWsImplPort">
+            <soap:address location="http://192.168.192.119:8080/module-practitioners-pmp/ws/practWs"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>
